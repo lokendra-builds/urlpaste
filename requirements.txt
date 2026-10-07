@@ -1,0 +1,8 @@
+# Install inside this project's own virtualenv:
+#   python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
+streamlit>=1.50,<2
+cryptography>=44
+pytest>=8
+
+# Installs the urlpaste package (and the `urlpaste` CLI) from this folder
+-e .

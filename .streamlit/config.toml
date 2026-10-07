@@ -1,0 +1,20 @@
+[server]
+# Files must fit inside a link; the app enforces 1 MB itself.
+maxUploadSize = 1
+enableXsrfProtection = true
+
+[client]
+# Hide the "Deploy" button and developer options from visitors
+toolbarMode = "minimal"
+showErrorDetails = false
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+base = "dark"
+primaryColor = "#818cf8"
+backgroundColor = "#0b0b10"
+secondaryBackgroundColor = "#16161f"
+textColor = "#ececf2"
+font = "sans serif"

@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "urlpaste"
+version = "0.1.0"
+description = "Share notes and small files as a link. Nothing is saved anywhere: the link is the note."
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Lokendra Singh Rathore" }]
+requires-python = ">=3.10"
+dependencies = ["cryptography>=44"]
+keywords = ["pastebin", "pastebin-alternative", "privacy", "url", "notes", "encryption", "no-database"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Environment :: Console",
+    "Topic :: Communications :: File Sharing",
+    "Topic :: Security :: Cryptography",
+]
+
+[project.optional-dependencies]
+web = ["streamlit>=1.50,<2"]
+dev = ["pytest>=8"]
+
+[project.scripts]
+urlpaste = "urlpaste.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/lokendra-builds/urlpaste"
+Demo = "https://urlpaste.streamlit.app/"
+
+[tool.setuptools]
+packages = ["urlpaste"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
